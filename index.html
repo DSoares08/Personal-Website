@@ -9,9 +9,82 @@
 </head>
 <body>
 <div id="header">
-
+  <div class="container">
+    <nav>
+      <img src="images/Screenshot 2024-03-16 151840.png" class="logo">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Portfolio</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="header-text">
+        <p>CS Student</p>
+          <h1>Hi, I'm <span>Diogo</span><br>Soares From Portugal</h1>
+      </div>
 </div>
+<!-- --------------about--------------- -->
+<div id="about">
+  <div class="container">
+    <div class="row">
+      <div class="about-col-1">
+        <img src="images/.png">
+      </div>
+      <div class="about-col-2">
+        <h1 class="sub-title">About Me</h1>
+        <p>I'm a Computer Science and Engineering student at TU/e and aspiring to develop innovative software. Born in Macau and raised in Spain, I quickly discovered various cultures and my passion of technology. I left high school with enthusiasm to start a new chapter. But I will always remember the teamwork lessons I learned as the captain of my basketball team for 3 years.</p>
 
+        <div class="tab-titles">
+          <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+          <p class="tab-links" onclick="opentab('experience')">Experience</p>
+          <p class="tab-links" onclick="opentab('education')">Education</p>
+        </div>
+        <div class="tab-contents active-tab" id="skills">
+          <ul>
+           <li><span>Map Designing</span><br>Creating game maps</li>
+           <li><span>Web Development</span><br>Web app development</li>
+           <li><span>App Development</span><br>Building Android/iOS apps</li>
+          </ul>
+        </div>
+        <div class="tab-contents" id="experience">
+          <ul>
+           <li><span>2023</span><br>Java Game Development project at TU/e</li>
+           <li><span>2023</span><br>Team lead at cie-pseudocode</li>
+           <li><span>2022</span><br>RC Model Plane Engineer at The British School of Barcelona</li>
+           <li><span>2018</span><br>Science Workshop at Universitat Politècnica de Catalunya</li>
+          </ul>
+        </div>
+        <div class="tab-contents" id="education">
+          <ul>
+           <li><span>2023 - Current</span><br>Computer Science and Engineering degree at TU/e</li>
+           <li><span>2023</span><br>International A Levels from The British School of Barcelona</li>
+           <li><span>2021</span><br>GCSEs from The British School of Barcelona</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>  
+
+<script>
+
+  var tablinks = document.getElementsByClassName("tab-links");
+  var tabcontents = document.getElementsByClassName("tab-contents");
+
+  function opentab(tabname){
+    for(tablink of tablinks){
+      tablink.classList.remove("active-link");
+    }
+    for(tabcontent of tabcontents){
+      tabcontent.classList.remove("active-tab");
+    }
+    event.currentTarget.classList.add("active-link");
+    document.getElementById(tabname).classList.add("active-tab");
+  }
+
+</script>
 
 </body>
 </head>
